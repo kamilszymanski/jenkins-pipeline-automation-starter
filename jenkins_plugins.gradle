@@ -1,0 +1,12 @@
+dependencies {
+    jenkinsPlugins 'org.jenkins-ci.plugins:ansicolor:0.6.2@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins:durable-task:1.30@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins:pipeline-stage-step:2.3@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins:timestamper:1.10@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins.workflow:workflow-api:2.37@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins.workflow:workflow-cps:2.30@jar' // stuck at version 2.30 due to https://issues.jenkins-ci.org/browse/JENKINS-59762
+    jenkinsPlugins 'org.jenkins-ci.plugins.workflow:workflow-durable-task-step:2.34@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins.workflow:workflow-step-api:2.20@jar'
+    jenkinsPlugins 'org.jenkins-ci.plugins:ws-cleanup:0.37@jar'
+    jenkinsPlugins 'org.jenkins-ci:symbol-annotation:1.20@jar'
+}

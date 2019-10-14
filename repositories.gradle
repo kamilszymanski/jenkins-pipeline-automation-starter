@@ -1,0 +1,6 @@
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+    maven { url 'http://repo.jenkins-ci.org/releases/' }
+}

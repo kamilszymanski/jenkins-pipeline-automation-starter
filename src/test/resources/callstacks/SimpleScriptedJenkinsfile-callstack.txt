@@ -1,0 +1,7 @@
+   SampleScriptedJenkinsfile.run()
+      SampleScriptedJenkinsfile.timestamps(groovy.lang.Closure)
+         SampleScriptedJenkinsfile.node(groovy.lang.Closure)
+            SampleScriptedJenkinsfile.stage(Sample, groovy.lang.Closure)
+               SampleScriptedJenkinsfile.ansiColor(xterm, groovy.lang.Closure)
+                  SampleScriptedJenkinsfile.sh(echo -e '\e[32mGenerating data\e[0m')
+               SampleScriptedJenkinsfile.sh(echo `date` > data)
