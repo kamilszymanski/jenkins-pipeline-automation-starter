@@ -1,6 +1,6 @@
 timestamps {
     node {
-        stage('Sample') {
+        stage('Generate data') {
             ansiColor('xterm') {
                 sh "echo -e '\\e[32mGenerating data\\e[0m'"
             }

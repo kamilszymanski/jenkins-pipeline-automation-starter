@@ -4,7 +4,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage('Sample') {
+        stage('Generate data') {
             steps {
                 ansiColor('xterm') {
                     sh "echo -e '\\e[32mGenerating data\\e[0m'"

@@ -16,6 +16,7 @@ Starter contains code samples that showcase how to create and test Jenkins pipel
 * remove tests from com.twitter.kszdev.jenkins.pipeline.jenkinsfile package
 * remove tests from com.twitter.kszdev.jenkins.pipeline.sharedlib package
 * remove test resources
+* remove or update README file
 * rename packages in test sources
 * update list of plugins available in tests
 * update registered allowed methods in tests
@@ -32,6 +33,10 @@ Starter contains code samples that showcase how to create and test Jenkins pipel
 |   |-- test                - contains pipelines and shared library tests
 |-- vars                    - contains shared library global variables and custom steps
 ```
+
+## Job DSL support
+
+Skeleton for [Job DSL](https://github.com/jenkinsci/job-dsl-plugin) based [Jenkins](https://jenkins.io/) CI/CD automation projects can be found in [jenkins-jobdsl-automation-starter](https://github.com/kamilszymanski/jenkins-jobdsl-automation-starter).
 
 ## References
 

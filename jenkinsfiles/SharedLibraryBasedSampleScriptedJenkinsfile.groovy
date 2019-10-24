@@ -1,6 +1,6 @@
 timestamps {
     node {
-        stage('Sample') {
+        stage('Generate data') {
             progressNotices.displayProgressNotice('Generating data')
             try {
                 generateData('data')
