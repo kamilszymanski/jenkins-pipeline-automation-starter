@@ -11,7 +11,7 @@ class SampleScriptedJenkinsfileSpec extends ScriptedPipelineSpecification implem
         when:
             jenkinsfile.run()
         then:
-            1 * getPipelineMock('sh')('echo `date` > data')
+            1 * getPipelineMock('sh')('echo `date` > generatedData.output')
     }
 
     def 'should clean workspace when data generation fails'() {
@@ -23,7 +23,7 @@ class SampleScriptedJenkinsfileSpec extends ScriptedPipelineSpecification implem
 
     def 'should not clean workspace when data generation succeeds'() {
         given:
-            getPipelineMock('sh')('echo `date` > data') >> { failStep() }
+            getPipelineMock('sh')('echo `date` > generatedData.output') >> { failStep() }
         when:
             expectingUnhandledStepFailure {
                 jenkinsfile.run()

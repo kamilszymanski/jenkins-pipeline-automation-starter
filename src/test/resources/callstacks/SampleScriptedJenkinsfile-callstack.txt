@@ -4,4 +4,4 @@
             SampleScriptedJenkinsfile.stage(Generate data, groovy.lang.Closure)
                SampleScriptedJenkinsfile.ansiColor(xterm, groovy.lang.Closure)
                   SampleScriptedJenkinsfile.sh(echo -e '\e[32mGenerating data\e[0m')
-               SampleScriptedJenkinsfile.sh(echo `date` > data)
+               SampleScriptedJenkinsfile.sh(echo `date` > generatedData.output)
