@@ -9,8 +9,8 @@ def call(String dataOutputFile, String dataGenerationProgressNotice = 'Generatin
                 steps {
                     script {
                         progressNotices.displayProgressNotice(dataGenerationProgressNotice)
-                        generateData(dataOutputFile)
                     }
+                    generateData(dataOutputFile)
                 }
                 post {
                     unsuccessful {

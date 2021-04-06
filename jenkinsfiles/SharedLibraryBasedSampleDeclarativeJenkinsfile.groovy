@@ -10,8 +10,8 @@ pipeline {
             steps {
                 script {
                     progressNotices.displayProgressNotice('Generating data')
-                    generateData('generatedData.output')
                 }
+                generateData('generatedData.output')
             }
             post {
                 unsuccessful {
