@@ -10,6 +10,6 @@ class GenerateDataSpec extends SharedLibrarySpecification {
         when:
             generateData('outputFile')
         then:
-            1 * getPipelineMock('sh')('echo `date` > outputFile')
+            1 * getPipelineMock('sh')('date > outputFile')
     }
 }

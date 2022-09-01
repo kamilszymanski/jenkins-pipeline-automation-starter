@@ -9,7 +9,7 @@ pipeline {
                 ansiColor('xterm') {
                     sh "echo -e '\\e[32mGenerating data\\e[0m'"
                 }
-                sh 'echo `date` > generatedData.output'
+                sh 'date > generatedData.output'
             }
             post {
                 unsuccessful {

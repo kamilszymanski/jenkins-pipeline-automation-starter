@@ -3,6 +3,11 @@ package com.twitter.kszdev.jenkins.pipeline.jenkinsfile
 import com.twitter.kszdev.jenkins.pipeline.ScriptedPipelineSpecification
 import com.twitter.kszdev.jenkins.pipeline.WithFailedStep
 
+/**
+ * Tests are utilizing Jenkins Pipeline Support for Spock
+ *
+ * @see <a href="https://github.com/ExpediaGroup/jenkins-spock">Jenkins Pipeline Support for Spock</a>
+ */
 class SampleScriptedJenkinsfileSpec extends ScriptedPipelineSpecification implements WithFailedStep {
 
     Script jenkinsfile = loadJenkinsfile('SampleScriptedJenkinsfile.groovy')
@@ -11,7 +16,7 @@ class SampleScriptedJenkinsfileSpec extends ScriptedPipelineSpecification implem
         when:
             jenkinsfile.run()
         then:
-            1 * getPipelineMock('sh')('echo `date` > generatedData.output')
+            1 * getPipelineMock('sh')('date > generatedData.output')
     }
 
     def 'should clean workspace when data generation fails'() {
@@ -23,7 +28,7 @@ class SampleScriptedJenkinsfileSpec extends ScriptedPipelineSpecification implem
 
     def 'should not clean workspace when data generation succeeds'() {
         given:
-            getPipelineMock('sh')('echo `date` > generatedData.output') >> { failStep() }
+            getPipelineMock('sh')('date > generatedData.output') >> { failStep() }
         when:
             expectingUnhandledStepFailure {
                 jenkinsfile.run()

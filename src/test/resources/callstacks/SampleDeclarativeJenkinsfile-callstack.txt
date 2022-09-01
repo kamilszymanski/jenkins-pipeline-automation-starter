@@ -1,0 +1,8 @@
+   SampleDeclarativeJenkinsfile.run()
+      SampleDeclarativeJenkinsfile.pipeline(groovy.lang.Closure)
+         SampleDeclarativeJenkinsfile.timestamps()
+         SampleDeclarativeJenkinsfile.echo(Executing on agent [label:any])
+         SampleDeclarativeJenkinsfile.stage(Generate data, groovy.lang.Closure)
+            SampleDeclarativeJenkinsfile.ansiColor(xterm, groovy.lang.Closure)
+               SampleDeclarativeJenkinsfile.sh(echo -e '\e[32mGenerating data\e[0m')
+            SampleDeclarativeJenkinsfile.sh(date > generatedData.output)

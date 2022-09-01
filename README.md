@@ -43,3 +43,7 @@ Skeleton for [Job DSL](https://github.com/jenkinsci/job-dsl-plugin) based [Jenki
 [Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/)
 
 [Pipeline Steps Reference](https://jenkins.io/doc/pipeline/steps/)
+
+[Jenkins Pipeline Unit testing framework](https://github.com/jenkinsci/JenkinsPipelineUnit)
+
+[Jenkins Pipeline Support for Spock](https://github.com/ExpediaGroup/jenkins-spock)

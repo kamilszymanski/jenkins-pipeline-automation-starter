@@ -9,7 +9,12 @@ import org.junit.Test
 import static com.lesfurets.jenkins.unit.RegressionTestHelper.PIPELINE_STACK_WRITE
 import static com.lesfurets.jenkins.unit.RegressionTestHelper.testNonRegression
 
-class CallStackEqualityTest extends BasePipelineTest implements WithJenkinsfilesSources, WithExpectedCallStacksSources {
+/**
+ * Tests are utilizing Jenkins Pipeline Unit testing framework
+ *
+ * @see <a href="https://github.com/jenkinsci/JenkinsPipelineUnit">Jenkins Pipeline Unit</a>
+ */
+class ScriptedPipelineCallStackEqualityTest extends BasePipelineTest implements WithJenkinsfilesSources, WithExpectedCallStacksSources {
 
     private final String originalWriteCallStacksValue = System.getProperty(PIPELINE_STACK_WRITE)?: Boolean.FALSE.toString()
 
@@ -20,14 +25,14 @@ class CallStackEqualityTest extends BasePipelineTest implements WithJenkinsfiles
     private boolean reGenerateCallStacks = false
 
     @Test
-    void 'generated call stack should match expected one'() throws Exception {
-        String jenkinsfileFileName = 'SampleScriptedJenkinsfile'
+    void 'SampleScriptedJenkinsfile pipeline call stack should match expected call stack'() throws Exception {
+        String jenkinsfile = 'SampleScriptedJenkinsfile'
         helper.registerAllowedMethod('ansiColor', [String, Closure], null)
         helper.registerAllowedMethod('timestamps', [Closure], null)
 
-        runScript(jenkinsfilePath(jenkinsfileFileName))
+        runScript(jenkinsfilePath(jenkinsfile))
 
-        testNonRegression(helper, callStackFileName(jenkinsfileFileName))
+        testNonRegression(helper, callStackPath(jenkinsfile))
     }
 
     @Before
@@ -43,11 +48,11 @@ class CallStackEqualityTest extends BasePipelineTest implements WithJenkinsfiles
         System.setProperty(PIPELINE_STACK_WRITE, originalWriteCallStacksValue)
     }
 
-    private String jenkinsfilePath(String jenkinsfileFileName) {
-        return getJenkinsfilePath("${jenkinsfileFileName}.groovy")
+    private String jenkinsfilePath(String jenkinsfile) {
+        return getJenkinsfilePath("${jenkinsfile}.groovy")
     }
 
-    private String callStackFileName(String jenkinsfileFileName) {
-        return getExpectedCallStackFileNamePath("${jenkinsfileFileName}-callstack")
+    private String callStackPath(String jenkinsfile) {
+        return getExpectedCallStackFileNamePath("${jenkinsfile}-callstack")
     }
 }
