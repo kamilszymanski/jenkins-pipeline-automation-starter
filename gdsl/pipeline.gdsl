@@ -62,6 +62,7 @@ contributor(ctx) {
     property(name: 'params', type: 'org.jenkinsci.plugins.workflow.cps.ParamsVariable')
     property(name: 'currentBuild', type: 'org.jenkinsci.plugins.workflow.cps.RunWrapperBinder')
     property(name: 'scm', type: 'org.jenkinsci.plugins.workflow.multibranch.SCMVar')
+    property(name: 'executeScript', type: 'org.jenkinsci.plugins.workflow.cps.global.UserDefinedGlobalVariable')
     property(name: 'generateData', type: 'org.jenkinsci.plugins.workflow.cps.global.UserDefinedGlobalVariable')
     property(name: 'progressNotices', type: 'org.jenkinsci.plugins.workflow.cps.global.UserDefinedGlobalVariable')
     property(name: 'reportingPipeline', type: 'org.jenkinsci.plugins.workflow.cps.global.UserDefinedGlobalVariable')
